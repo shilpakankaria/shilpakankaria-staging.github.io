@@ -398,8 +398,9 @@ em{font-style:italic;color:var(--accent)}
 .footer-row{max-width:var(--max);margin:0 auto;display:flex;justify-content:space-between;
   align-items:center;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
 .footer-logo{display:inline-flex;align-items:center}
-.footer-version{font-size:10.5px;color:#b8b4ac;letter-spacing:.04em;width:100%;
-  text-align:center;order:99;margin-top:4px}
+.footer-version{font-size:10.5px;color:#F7F4ED;letter-spacing:.04em;width:100%;
+  text-align:center;order:99;margin-top:4px;user-select:all;cursor:default}
+.footer-version::selection{color:var(--ink);background:var(--accent-soft)}
 .footer-logo .logo-stack{font-size:.72rem}
 .footer-links{display:flex;gap:24px}
 .footer-links a{color:var(--muted);transition:color .3s}
