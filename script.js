@@ -172,7 +172,7 @@
     document.body.appendChild(lb);
     const lbImg = lb.querySelector('img');
     const lbCount = lb.querySelector('.lb-count');
-    let items = [], idx = 0;
+    let items = [], idx = 0, lastTrigger = null;
 
     const show = i => {
       idx = (i + items.length) % items.length;
@@ -181,21 +181,29 @@
       lbImg.alt = img.alt;
       lbCount.textContent = `${idx + 1} / ${items.length}`;
     };
-    const open = (group, i) => {
+    const open = (group, i, trigger) => {
       items = group;
+      lastTrigger = trigger || document.activeElement;
       show(i);
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
+      lb.querySelector('.lb-close').focus();
     };
     const close = () => {
       lb.classList.remove('open');
       document.body.style.overflow = '';
+      lastTrigger?.focus();
     };
 
     masonries.forEach(m => {
       const imgs = [...m.querySelectorAll('img')];
       imgs.forEach((img, i) => {
-        img.closest('.m-item')?.addEventListener('click', () => open(imgs, i));
+        const item = img.closest('.m-item');
+        if (!item) return;
+        item.addEventListener('click', () => open(imgs, i, item));
+        item.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(imgs, i, item); }
+        });
       });
     });
 
