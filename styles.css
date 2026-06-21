@@ -337,7 +337,11 @@ em{font-style:italic;color:var(--accent)}
 /* ---------- Gallery teaser (compact, creative) ---------- */
 .gallery-teaser{overflow:hidden}
 .gt-grid{display:grid;grid-template-columns:1fr .85fr;gap:clamp(30px,5vw,60px);align-items:center}
-.gallery-intro{max-width:56ch;color:var(--muted);margin-top:1.4rem;font-size:1.05rem;margin-bottom:2rem}
+.gallery-intro{max-width:56ch;color:var(--muted);margin-top:1.4rem;font-size:1.05rem;margin-bottom:1.2rem}
+.gallery-instagram{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;
+  color:var(--ink-2);margin-bottom:2rem;transition:color .3s}
+.gallery-instagram:hover{color:var(--accent)}
+.gallery-instagram svg{width:18px;height:18px;flex-shrink:0}
 .gt-stack{position:relative;height:clamp(280px,32vw,400px)}
 .gt-card{position:absolute;border-radius:18px;object-fit:cover;
   box-shadow:0 30px 60px -28px rgba(0,0,0,.35);transition:transform .5s var(--ease);
