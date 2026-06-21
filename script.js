@@ -28,14 +28,27 @@
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
   });
+  let lockedY = 0;
+  const lockScroll = () => {
+    lockedY = window.scrollY;
+    document.body.style.top = `-${lockedY}px`;
+    document.body.classList.add('nav-open');
+  };
+  const unlockScroll = () => {
+    document.body.classList.remove('nav-open');
+    document.body.style.top = '';
+    window.scrollTo({ top: lockedY, left: 0, behavior: 'instant' });
+  };
   burger?.addEventListener('click', () => {
-    burger.classList.toggle('open');
+    const open = burger.classList.toggle('open');
     navLinks.classList.toggle('open');
+    open ? lockScroll() : unlockScroll();
   });
   navLinks?.querySelectorAll('a').forEach(a =>
     a.addEventListener('click', () => {
       burger.classList.remove('open');
       navLinks.classList.remove('open');
+      unlockScroll();
     })
   );
 

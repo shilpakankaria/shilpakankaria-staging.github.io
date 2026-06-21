@@ -39,7 +39,7 @@ body{background:#EFEEF4}
   font-size:clamp(2.8rem,6vw,4.6rem);line-height:.95;color:var(--ink)}
 .cs-stat span{display:block;margin-top:.5rem;font-style:italic;font-weight:500;
   text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-size:14px}
-@media(max-width:760px){.cs-stats{grid-template-columns:1fr;gap:34px}}
+@media(max-width:760px){.cs-stats{grid-template-columns:minmax(0,1fr);gap:34px}}
 
 /* ---------- Section heading ---------- */
 .cs-sec{max-width:1280px;margin:clamp(70px,9vw,120px) auto 0;padding:0 var(--pad)}
@@ -83,7 +83,7 @@ body{background:#EFEEF4}
 .doc img{width:100%;display:block;border-radius:10px}
 .doc-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px)}
 .doc-cap{font-size:13px;color:var(--muted);margin-top:1rem;text-align:center}
-@media(max-width:820px){.doc-2,.panel-grid{grid-template-columns:1fr}.panel-grid.rev .panel-copy{order:0}}
+@media(max-width:820px){.doc-2,.panel-grid{grid-template-columns:minmax(0,1fr)}.panel-grid.rev .panel-copy{order:0}}
 
 /* ---------- Double Diamond visual timeline ---------- */
 .dd{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
@@ -111,7 +111,7 @@ body{background:#EFEEF4}
   box-shadow:0 50px 80px -45px rgba(40,30,80,.55)}
 .phone video,.phone img{width:100%;display:block;border-radius:28px}
 @media(max-width:760px){.phones.c3{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.phones.c3,.phones.c2{grid-template-columns:1fr}}
+@media(max-width:520px){.phones.c3,.phones.c2{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- Browser frame (Haus long pages) ---------- */
 .frame{border-radius:18px;overflow:hidden;background:#fff;
@@ -172,3 +172,9 @@ body{background:#EFEEF4}
 .cs-linkbtn:hover{background:var(--accent);transform:translateY(-2px)}
 
 @media(max-width:880px){.cs-facts{grid-template-columns:1fr 1fr}}
+
+/* Inline white-space:nowrap forces single-line copy on desktop; on narrow
+   screens it has nothing to shrink into and forces page-wide horizontal
+   overflow (the mobile "zoomed in / scrolls past the edge" bug). Let it
+   wrap again below the point where columns stack. */
+@media(max-width:820px){[style*="white-space:nowrap"]{white-space:normal!important}}
