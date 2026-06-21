@@ -263,6 +263,11 @@ em{font-style:italic;color:var(--accent)}
 .about-title{font-family:'Fraunces',serif;font-weight:340;line-height:1.05;
   font-size:clamp(2rem,4.6vw,3.6rem);margin-bottom:1.6rem;letter-spacing:-.01em}
 .about-copy p{color:var(--muted);max-width:54ch;margin-bottom:1.1rem}
+.about-links{display:flex;gap:22px;flex-wrap:wrap;margin-top:1.6rem}
+.about-links a{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;
+  color:var(--ink-2);transition:color .3s}
+.about-links a:hover{color:var(--accent)}
+.about-links svg{width:18px;height:18px;flex-shrink:0}
 .about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:2.4rem}
 .pillar{border-top:1px solid var(--line);padding-top:14px}
 .pillar strong{display:block;font-size:1.05rem;font-weight:600}
