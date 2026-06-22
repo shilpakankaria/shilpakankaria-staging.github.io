@@ -297,7 +297,7 @@ em{font-style:italic;color:var(--accent)}
 .step p{color:var(--muted);font-size:15px}
 
 /* ---------- Skills / Toolkit ---------- */
-.skills{background:#C8C7C2;max-width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+.skills{background:var(--bg-2);max-width:100%;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   padding-top:clamp(48px,7.2vw,102px)}
 .skills-grid{max-width:var(--max);margin:0 auto;display:grid;
   grid-template-columns:repeat(4,1fr);gap:22px}
