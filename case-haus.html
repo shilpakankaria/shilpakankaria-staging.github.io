@@ -81,30 +81,27 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
 @media (max-width:860px){.hs-brief-grid{grid-template-columns:1fr}.hs-brief-img{order:-1}}
 
 /* ============ FEATURES ============ */
-.hs-features{background:var(--cream);padding:clamp(50px,7vw,90px) 0}
+.hs-features{background:var(--cream);padding:clamp(50px,7vw,90px) 0 clamp(20px,2.5vw,32px)}
 .hs-feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(36px,5vw,56px)}
 .hs-feat-card{text-align:center}
 .hs-feat-card img{width:clamp(64px,7vw,92px);height:auto;display:block;margin:0 auto 1rem}
 .hs-feat-card h3{font-family:'Inter',sans-serif;font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
 .hs-feat-card p{font-size:.82rem;line-height:1.5;color:#7a756c}
-@media (max-width:860px){.hs-feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:860px){.hs-feat-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:540px){.hs-feat-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* ============ PROCESS (trimmed) ============ */
 .hs-process{background:var(--cream);padding:clamp(40px,5.5vw,70px) 0}
+.hs-process-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,64px);align-items:center}
+.hs-process-img{border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.25)}
+.hs-process-img img{width:100%;height:auto;display:block;object-fit:contain}
+@media (max-width:860px){.hs-process-grid{grid-template-columns:1fr}.hs-process-img{order:-1}}
 
 /* ============ DESIGN SYSTEM ============ */
 .hs-system{background:var(--paper);padding:clamp(50px,7vw,90px) 0}
-.hs-sys-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,32px);align-items:stretch;margin-top:clamp(24px,3vw,32px)}
+.hs-sys-grid{margin-top:clamp(24px,3vw,32px);max-width:680px;margin-left:auto;margin-right:auto}
 .hs-board{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 26px 50px -42px rgba(0,0,0,.2)}
-.hs-board img{width:100%;height:100%;object-fit:cover;display:block;object-position:top}
-.hs-type{background:#fff;border-radius:16px;padding:clamp(20px,2.6vw,28px);box-shadow:0 26px 50px -42px rgba(0,0,0,.2);
-  display:flex;flex-direction:column;justify-content:center}
-.hs-type .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a958c;margin-bottom:.5rem}
-.hs-type .big{font-family:'Nunito Sans',sans-serif;font-weight:900;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1;color:var(--ink);margin-bottom:.3rem}
-.hs-type .alpha{font-family:'Nunito Sans',sans-serif;color:#9a958c;letter-spacing:.02em;font-size:12.5px;line-height:1.6;margin-bottom:1.1rem}
-.hs-swrow{display:flex;gap:8px;margin-top:1rem;flex-wrap:wrap}
-.hs-swrow .s{flex:1;min-width:56px;border-radius:10px;height:44px;display:flex;align-items:flex-end;padding:6px;font-size:9px;font-weight:600}
-@media(max-width:760px){.hs-sys-grid{grid-template-columns:minmax(0,1fr)}}
+.hs-board img{width:100%;height:auto;object-fit:contain;display:block}
 
 /* ============ DELIVER · THE PRODUCT ============ */
 .hs-homescreen{background:var(--cream);padding-bottom:0;padding-top:clamp(42px,6vw,84px)}
@@ -113,21 +110,31 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
 
 /* ============ HAUS, IN ACTION ============ */
 .hs-build{background:var(--cream);padding-top:clamp(39px,5.5vw,77px)}
-.hs-feat{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,4vw,56px);align-items:stretch;margin-top:clamp(56px,7vw,90px)}
+.hs-feat{margin-top:clamp(56px,7vw,90px)}
 .hs-feat:first-of-type{margin-top:clamp(48px,6vw,72px)}
-.hs-feat-copy{display:flex;flex-direction:column;justify-content:center;padding-top:1.82rem}
+.hs-feat-copy{max-width:640px;margin-bottom:clamp(24px,3vw,32px)}
 .hs-feat-copy .num{font-weight:700;font-size:12px;letter-spacing:.12em;color:var(--accent)}
 .hs-feat-copy h3{font-weight:500;font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.15;margin:.5rem 0 .6rem;font-family:'Fraunces',serif}
-.hs-feat-copy p{color:#6B6359;line-height:1.6;font-size:.96rem;max-width:42ch}
-.hs-feat-media{display:flex;align-items:flex-end}
-.hs-frame{width:100%;border-radius:14px;overflow:hidden;background:#0c0b10;
-  box-shadow:0 40px 70px -40px rgba(0,0,0,.4)}
+.hs-feat-copy p{color:#6B6359;line-height:1.6;font-size:.96rem;max-width:50ch}
+.hs-frame{width:100%;max-width:920px;margin:0 auto;border-radius:14px;overflow:hidden;background:#0c0b10;
+  box-shadow:0 40px 70px -40px rgba(0,0,0,.4);position:relative}
 .hs-frame-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#1a1a1a}
 .hs-frame-bar i{width:9px;height:9px;border-radius:50%;background:#3a3a3a}
-.hs-frame video{width:100%;aspect-ratio:1920/1080;display:block;object-fit:cover}
-@media(max-width:820px){
-  .hs-feat{grid-template-columns:minmax(0,1fr);gap:24px}
-  .hs-feat-media{order:-1}
+.hs-frame video{width:100%;aspect-ratio:1920/1080;display:block;object-fit:cover;cursor:pointer}
+.hs-frame-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;
+  border-radius:50%;background:rgba(255,255,255,.94);border:none;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:var(--ink);transition:transform .25s,background .25s}
+.hs-frame-play:hover{background:#fff;transform:translate(-50%,-50%) scale(1.06)}
+.hs-frame-play svg{width:18px;height:18px;margin-left:2px}
+.hs-frame.is-playing .hs-frame-play{display:none}
+.hs-static-gallery{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,20px)}
+.hs-static-gallery img{width:100%;height:auto;display:block;border-radius:14px;
+  box-shadow:0 30px 60px -36px rgba(0,0,0,.3)}
+.hs-static-single{grid-template-columns:1fr}
+@media(max-width:600px){.hs-static-gallery{grid-template-columns:1fr}}
+@media(max-width:680px){
+  .hs-hero h1,.hs-h2{font-size:1.5rem!important;line-height:1.15!important}
+  .cs-linkbtn,.hs-proto-cta{padding:7px 14px!important;font-size:11.5px!important}
 }
 
 /* ============ CLOSE ============ */
@@ -209,32 +216,31 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
 <section class="hs-sec hs-features">
   <div class="hs-wrap">
     <p class="hs-eyebrow reveal">Proposed Solution</p>
-    <h2 class="hs-h2 reveal" style="font-size:clamp(1.5rem,2.8vw,2.1rem)"><span class="hs-ln"><span>Five features built for the <em>adventurous.</em></span></span></h2>
+    <h2 class="hs-h2 reveal" style="font-size:clamp(1.5rem,2.8vw,2.1rem)"><span class="hs-ln"><span>Five features built for <em>explorers</em></span></span></h2>
     <div class="hs-feat-grid">
       <div class="hs-feat-card reveal">
         <img loading="lazy" src="assets/haus/icon-concierge.png" alt="" />
         <h3>Adventure Concierge</h3>
-        <p>Guidance and recommendations tailored to each guest.</p>
       </div>
       <div class="hs-feat-card reveal">
         <img loading="lazy" src="assets/haus/icon-packages.png" alt="" />
         <h3>Adventure Packages</h3>
-        <p>Hiking, kayaking and cycling, booked in one flow.</p>
       </div>
       <div class="hs-feat-card reveal">
         <img loading="lazy" src="assets/haus/icon-storage.png" alt="" />
         <h3>Gear Storage</h3>
-        <p>Rental and storage for equipment, handled on-site.</p>
       </div>
       <div class="hs-feat-card reveal">
         <img loading="lazy" src="assets/haus/icon-navigation.png" alt="" />
         <h3>User-Centric Navigation</h3>
-        <p>Clear paths to rooms, activities and checkout.</p>
       </div>
       <div class="hs-feat-card reveal">
         <img loading="lazy" src="assets/haus/icon-booking.png" alt="" />
         <h3>Seamless Booking</h3>
-        <p>An interactive calendar with secure payment, built for mobile and desktop.</p>
+      </div>
+      <div class="hs-feat-card reveal">
+        <img loading="lazy" src="assets/haus/icon-concierge.png" alt="" />
+        <h3>Local Discovery</h3>
       </div>
     </div>
   </div>
@@ -242,10 +248,15 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
 
 <!-- ===== PROCESS (trimmed) ===== -->
 <section class="hs-sec hs-process">
-  <div class="hs-wrap">
-    <p class="hs-eyebrow reveal">Process</p>
-    <h2 class="hs-h2 reveal" style="font-size:clamp(1.5rem,2.8vw,2.1rem)"><span class="hs-ln"><span>Research, distilled to what <em>mattered.</em></span></span></h2>
-    <p class="hs-lead reveal">Competitor benchmarking showed most boutique-hotel sites bury booking behind clutter — so personas, empathy mapping and wireframe iterations all pushed toward one goal: a single, unhurried path from browsing to booking.</p>
+  <div class="hs-wrap hs-process-grid">
+    <div>
+      <p class="hs-eyebrow reveal">Process</p>
+      <h2 class="hs-h2 reveal" style="font-size:clamp(1.5rem,2.8vw,2.1rem)"><span class="hs-ln"><span>Research, distilled to what <em>mattered.</em></span></span></h2>
+      <p class="hs-lead reveal">Competitor benchmarking showed most boutique-hotel sites bury booking behind clutter — so personas, empathy mapping and wireframe iterations all pushed toward one goal: a single, unhurried path from browsing to booking.</p>
+    </div>
+    <div class="hs-process-img reveal">
+      <img loading="lazy" src="assets/haus/process-mock.jpg" alt="Laptop mockup of the Haus homepage showing the Haus Effect intro and featured stays" />
+    </div>
   </div>
 </section>
 
@@ -259,18 +270,6 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
     </div>
     <div class="hs-sys-grid reveal">
       <div class="hs-board"><img loading="lazy" width="1216" height="2000" src="assets/haus/design-systerm.jpg" alt="Haus design system — typography, colours and iconography" /></div>
-      <div class="hs-type">
-        <p class="lbl">Typeface — Nunito Sans</p>
-        <p class="big">Aa Bb Cc</p>
-        <p class="alpha">ABCDEFGHIJKLM · abcdefghijklmnop · 1234567890</p>
-        <p class="lbl">Palette</p>
-        <div class="hs-swrow">
-          <div class="s" style="background:#D54B34;color:#fff">#D54B34</div>
-          <div class="s" style="background:#252523;color:#fff">#252523</div>
-          <div class="s" style="background:#757575;color:#fff">#757575</div>
-          <div class="s" style="background:#FFF9E9;color:#252523;border:1px solid rgba(0,0,0,.08)">#FFF9E9</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -281,7 +280,7 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
     <div class="hs-sec-head reveal">
       <p class="hs-eyebrow">Deliver · The product</p>
     </div>
-    <div class="hs-deliver-cover reveal"><img loading="lazy" width="2871" height="1579" src="assets/haus/deliver-cover.jpg" alt="Haus Hotel homepage" /></div>
+    <div class="hs-deliver-cover reveal"><img loading="lazy" width="1976" height="2030" src="assets/haus/haus-home-clean.png" alt="Haus Hotel homepage — the final branded experience" /></div>
   </div>
 </section>
 
@@ -293,72 +292,85 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
       <p class="cs-text">The final, branded experience — from first impression to a booked stay.</p>
     </div>
 
-    <!-- 1 Welcome -->
+    <!-- 1 Welcome — video, click to play -->
     <div class="hs-feat">
-      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-1.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
       <div class="hs-feat-copy reveal">
         <span class="num">01 — WELCOME</span>
         <h3>The Haus Effect</h3>
-        <p style="white-space:nowrap">An editorial homepage that sets the tone immediately.</p>
+        <p>An editorial homepage that sets the tone immediately.</p>
       </div>
+      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-1.mp4" autoplay muted loop playsinline aria-hidden="true" tabindex="-1"></video></div></div>
     </div>
 
-    <!-- 2 Account -->
+    <!-- 2 Account — static gallery -->
     <div class="hs-feat">
-      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-2.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
       <div class="hs-feat-copy reveal">
         <span class="num">02 — ACCOUNT</span>
         <h3>Signing in, without friction</h3>
-        <p style="white-space:nowrap">A lightweight login and signup that stays out of the way.</p>
+        <p>A lightweight login and signup that stays out of the way.</p>
+      </div>
+      <div class="hs-feat-media reveal">
+        <div class="hs-static-gallery">
+          <img loading="lazy" src="assets/haus/static-account-1.jpg" alt="Login or signup screen" />
+          <img loading="lazy" src="assets/haus/static-account-2.jpg" alt="Phone verification screen" />
+        </div>
       </div>
     </div>
 
-    <!-- 3 Booking -->
+    <!-- 3 Booking — static gallery -->
     <div class="hs-feat">
-      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-3.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
       <div class="hs-feat-copy reveal">
         <span class="num">03 — BOOKING</span>
         <h3>Search and dates, simplified</h3>
-        <p style="white-space:nowrap">One widget for location, room type, guests and dates.</p>
+        <p>One widget for location, room type, guests and dates.</p>
+      </div>
+      <div class="hs-feat-media reveal">
+        <div class="hs-static-gallery hs-static-single">
+          <img loading="lazy" src="assets/haus/static-room-booking.png" alt="Room booking flow" />
+        </div>
       </div>
     </div>
 
-    <!-- 4 Rooms -->
+    <!-- 4 Rooms — static gallery -->
     <div class="hs-feat">
-      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-4.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
       <div class="hs-feat-copy reveal">
         <span class="num">04 — ROOMS</span>
         <h3>Browsing made desirable</h3>
-        <p style="white-space:nowrap">Editorial room cards with clear pricing, easy to compare.</p>
+        <p>Editorial room cards with clear pricing, easy to compare.</p>
+      </div>
+      <div class="hs-feat-media reveal">
+        <div class="hs-static-gallery">
+          <img loading="lazy" src="assets/haus/static-other-rooms.png" alt="Other rooms listing" />
+          <img loading="lazy" src="assets/haus/static-explore.png" alt="Explore Glasgow page" />
+        </div>
       </div>
     </div>
 
-    <!-- 5 Activities -->
+    <!-- 5 Activities — video autoplay -->
+
     <div class="hs-feat">
-      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-5.mp4" muted loop autoplay playsinline aria-hidden="true" tabindex="-1"></video></div></div>
       <div class="hs-feat-copy reveal">
         <span class="num">05 — ACTIVITIES</span>
         <h3>Beyond the room</h3>
-        <p style="white-space:nowrap">Curated Glasgow activities, extending the stay beyond the hotel.</p>
+        <p>Curated Glasgow activities, extending the stay beyond the hotel.</p>
       </div>
+      <div class="hs-feat-media reveal"><div class="hs-frame"><div class="hs-frame-bar"><i></i><i></i><i></i></div><video src="assets/haus/video-5.mp4" autoplay muted loop playsinline aria-hidden="true" tabindex="-1"></video></div></div>
     </div>
+
   </div>
 </section>
 
 <!-- ===== PROTOTYPE CTA ===== -->
 <section class="hs-sec hs-proto-section">
   <div class="hs-wrap" style="text-align:center">
-    <a href="https://www.figma.com/proto/OJ4trkaPvTjSe4xitRyGHT/HAUS---Visual-Design?node-id=165-3176&starting-point-node-id=165%3A3176&t=dz5LCV85VWfs9S29-1" target="_blank" class="cs-linkbtn reveal hs-proto-btn" data-hover>Prototype ↗</a>
+    <a href="https://www.figma.com/proto/OJ4trkaPvTjSe4xitRyGHT/HAUS---Visual-Design?node-id=165-3176&starting-point-node-id=165%3A3176&t=dz5LCV85VWfs9S29-1" target="_blank" class="cs-linkbtn reveal hs-proto-btn" data-hover>Prototype <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
 <!-- ===== CLOSE ===== -->
 <section class="hs-sec hs-close">
-  <div class="hs-wrap">
-    <p class="hs-eyebrow reveal">Outcome</p>
-    <h2 class="reveal"><span class="hs-ln"><span>Designing for luxury through <em>restraint.</em></span></span></h2>
-    <p class="reveal">Every element earned its place, and white space did as much work as imagery — my illustrator's eye for composition translated directly into pacing the page.</p>
-    <a class="cs-linkbtn reveal" href="https://drive.google.com/file/d/15BjbY_ItGkV0NQ4FilOk9o6n6sPmTlWa/view?usp=sharing" target="_blank" rel="noopener" data-hover>Read the full report ↗</a>
+  <div class="hs-wrap" style="text-align:center">
+    <a class="cs-linkbtn reveal" href="https://drive.google.com/file/d/15BjbY_ItGkV0NQ4FilOk9o6n6sPmTlWa/view?usp=sharing" target="_blank" rel="noopener" data-hover>Read the full report <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
@@ -379,8 +391,9 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
       <a href="mailto:shilpakankaria60@gmail.com" aria-label="Email" data-hover><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg></a>
       <a href="https://www.instagram.com/spilled_hues" target="_blank" rel="noopener" aria-label="Instagram" data-hover><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
     </div>
-    <span>&copy; 2026 Shilpa Kankaria</span>
-  </div>
+
+    </div>
+  <p class="footer-copy">&copy; 2026 Shilpa Kankaria</p>
 </footer>
 <script src="script.js"></script>
 </body>
