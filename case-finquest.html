@@ -243,18 +243,20 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
 .fq-proto-btn{background:var(--accent)}
 .fq-proto-btn:hover{background:var(--ink)}
 
-.cs-next{max-width:1200px;margin:0 auto;padding:clamp(50px,7vw,90px) clamp(24px,5vw,72px);
-  border-top:1px solid rgba(0,0,0,.08);display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cs-next{max-width:1200px;margin:0 auto;padding:clamp(24px,3vw,40px) clamp(24px,5vw,72px);
+  border-top:1px solid rgba(0,0,0,.08);display:flex;align-items:center}
 .cs-next a{color:var(--ink)}.cs-next a:hover{color:var(--accent)}
-.cs-next .fq-next-link{display:flex;align-items:center;gap:16px}
-.fq-next-thumb{width:64px;height:64px;border-radius:12px;overflow:hidden;flex-shrink:0;
+.gq-nav-side{display:flex;flex-direction:column;gap:10px;flex:1;text-decoration:none;padding:0 clamp(16px,3vw,40px)}
+.gq-nav-side--right{align-items:flex-end}
+.gq-nav-side-label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-family:'Inter'}
+.gq-nav-row{display:flex;align-items:center;gap:14px}
+.gq-nav-row--right{flex-direction:row-reverse}
+.gq-next-thumb{width:60px;height:60px;border-radius:10px;overflow:hidden;flex-shrink:0;
   background:#fff;display:flex;align-items:center;justify-content:center;padding:8px;
   box-shadow:0 14px 26px -18px rgba(0,0,0,.3)}
-.fq-next-thumb img{width:100%;height:100%;display:block;object-fit:contain}
-.cs-next .fq-next-label{font-family:'Inter';font-weight:400;
-  font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
-.fq-next-arrow{color:var(--accent);transition:transform .3s var(--ease);display:inline-block}
-.fq-next-link:hover .fq-next-arrow{transform:translateX(4px)}
+.gq-next-thumb img{width:100%;height:100%;display:block;object-fit:contain}
+.gq-next-name{font-family:'Inter';font-weight:500;font-size:16px;color:var(--ink)}
+.gq-nav-divider{width:1px;height:52px;background:var(--ink);opacity:.12;flex-shrink:0}
 </style>
 </head>
 <body>
@@ -573,11 +575,21 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
   </div>
 </section>
 
-<nav class="cs-next fq-next">
-  <span>Next project</span>
-  <a href="case-glasgow.html" class="fq-next-link" data-hover>
-    <span class="fq-next-thumb"><img loading="lazy" width="236" height="184" src="assets/glasgo/go.png" alt="Glasgo logo" /></span>
-    <span class="fq-next-label">Glasgo <span class="fq-next-arrow" aria-hidden="true">→</span></span>
+<nav class="cs-next">
+  <a href="case-haus.html" class="gq-nav-side" data-hover>
+    <span class="gq-nav-side-label">← Previous project</span>
+    <span class="gq-nav-row">
+      <span class="gq-next-thumb"><img loading="lazy" width="328" height="131" src="assets/haus/haus-logo.png" alt="Haus Hotel logo" /></span>
+      <span class="gq-next-name">Haus Hotel</span>
+    </span>
+  </a>
+  <div class="gq-nav-divider"></div>
+  <a href="case-glasgow.html" class="gq-nav-side gq-nav-side--right" data-hover>
+    <span class="gq-nav-side-label">Next project →</span>
+    <span class="gq-nav-row gq-nav-row--right">
+      <span class="gq-next-thumb"><img loading="lazy" width="236" height="184" src="assets/glasgo/go.png" alt="Glasgo logo" /></span>
+      <span class="gq-next-name">Glasgo</span>
+    </span>
   </a>
 </nav>
 
