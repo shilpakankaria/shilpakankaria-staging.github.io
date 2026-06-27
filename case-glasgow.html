@@ -184,8 +184,12 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
 .gq-build{padding-bottom:0}
 .gq-proto-section{padding:clamp(38px,5.5vw,77px) 0;background:var(--cream)}
 .gq-proto-section .cs-linkbtn{margin-top:0}
-.gq-proto-btn{background:var(--accent)}
-.gq-proto-btn:hover{background:var(--ink)}
+.gq-proto-btn{background:var(--accent);color:#fff}
+.gq-proto-btn:hover{background:var(--accent);opacity:.85;transform:translateY(-2px)}
+.gq-cta-row{display:flex;flex-direction:column;align-items:center;gap:20px;margin-top:0}
+.gq-cta-row .cs-linkbtn{margin-top:0;width:180px;text-align:center;box-sizing:border-box}
+.gq-report-btn{background:transparent;border:1.5px solid var(--accent);color:var(--accent)}
+.gq-report-btn:hover{background:transparent;opacity:.7;transform:translateY(-2px)}
 
 /* ============ CLOSE ============ */
 .gq-close{background:var(--paper);color:var(--ink);text-align:center;padding-top:clamp(23px,3.3vw,46px)}
@@ -431,7 +435,10 @@ body{background:var(--cream);color:var(--ink);font-family:'Inter',sans-serif}
 <!-- ===== PROTOTYPE CTA ===== -->
 <section class="gq-sec gq-proto-section">
   <div class="gq-wrap" style="text-align:center">
-    <a href="https://www.figma.com/proto/75aHy9bI1od20Oky710g4H/Test-Wireframe---UX-project?page-id=381%3A4268&node-id=471-11349&viewport=1132%2C2807%2C0.57&t=7zkkk5LhZl8wRDvs-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=471%3A11349&show-proto-sidebar=1" target="_blank" class="cs-linkbtn reveal gq-proto-btn" data-hover>Prototype <span aria-hidden="true">↗</span></a>
+    <div class="gq-cta-row reveal">
+      <a href="https://www.figma.com/proto/75aHy9bI1od20Oky710g4H/Test-Wireframe---UX-project?page-id=381%3A4268&node-id=471-11349&viewport=1132%2C2807%2C0.57&t=7zkkk5LhZl8wRDvs-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=471%3A11349&show-proto-sidebar=1" target="_blank" class="cs-linkbtn gq-proto-btn" data-hover>Prototype <span aria-hidden="true">↗</span></a>
+      <a href="https://drive.google.com/file/d/1AYJL-qaSfriLkCpimEfnqoxpENWhfGdZ/view?usp=sharing" target="_blank" class="cs-linkbtn gq-report-btn" data-hover>Design Report <span aria-hidden="true">↗</span></a>
+    </div>
   </div>
 </section>
 
