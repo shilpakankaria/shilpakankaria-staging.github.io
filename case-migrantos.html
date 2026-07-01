@@ -210,7 +210,8 @@ body{background:var(--mo-cream);color:var(--mo-ink);font-family:'Inter',sans-ser
 .mo-logo-txt{font-family:'Hanken Grotesk','Inter',sans-serif;font-weight:700;font-size:1.15rem;color:var(--mo-ink)}
 .mo-logo-txt span{color:var(--mo-blue)}
 .mo-dsp-tag{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9a958c;font-weight:600}
-.mo-dsp-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,18px);align-items:start}
+.mo-dsp-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,18px);align-items:stretch}
+.mo-dsp-col:last-child .mo-tile:last-child{flex:1;display:flex;flex-direction:column;justify-content:center}
 .mo-dsp-col{display:flex;flex-direction:column;gap:clamp(14px,2vw,18px)}
 .mo-tile{background:#fbfbfa;border:1px solid #eeece8;border-radius:16px;padding:clamp(15px,1.8vw,20px)}
 .mo-tl{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#9a958c;font-weight:600;margin-bottom:.9rem}
