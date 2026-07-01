@@ -161,7 +161,7 @@ body{background:#EFEEF4}
 
 /* ---------- Next ---------- */
 .cs-next{max-width:1280px;margin:clamp(70px,10vw,130px) auto 0;padding:clamp(50px,7vw,90px) var(--pad);
-  border-top:1px solid #DEDDE7;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
 .cs-next a{font-family:'Inter';font-weight:800;text-transform:uppercase;letter-spacing:-.02em;
   font-size:clamp(1.6rem,5vw,3.4rem);transition:color .3s}
 .cs-next a:hover{color:var(--accent)}
